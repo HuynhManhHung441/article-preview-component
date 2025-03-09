@@ -46,7 +46,6 @@ body {
     word-spacing: 0.25%;
 }
 
-
 .article-preview__description{
     font-size: 13px;
     line-height: 140%;
@@ -103,13 +102,13 @@ body {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background-color: hsl(213, 72%, 92%);
+    background-color: #ecf2f8;
+    background-color: hsl(203, 100%, 94%);
 }
 
 .card-footer .fa-share {
-    display: inline-block;
-    text-align: center;
-    color: hsl(214, 17%, 51%);
+    display: inline-flex;
+    color: #6e8098;
 }
 
 /* .card__popup {
@@ -119,4 +118,95 @@ body {
 .card__popup {
     display: none;
 }
-  
+
+/* Tablet Layout */
+@media (max-width: 768px) {
+    .article-preview-card {
+        width: 608px;
+        height: 346px;
+        /* border-radius: 10px; */
+        /* display: flex; */
+        gap: 32px;
+        background-color: hsl(210, 46%, 95%);
+        margin: 100px auto;
+    }
+
+    .illustration-img {
+        max-width: 100%;
+        display: block;
+        width: 229px;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px 0 0 10px;
+    }
+
+    .article-preview-content {
+        width: 311px;
+        height: 264px;
+    }
+}
+
+/* Mobile Layout */
+@media (max-width: 426px) {
+    .article-preview-card {
+        width:327px;
+        height: 520px;
+        background-color: hsl(210, 46%, 95%);
+        margin: 100px auto;
+        flex-direction: column; 
+        gap: 0;  
+    }
+
+    .article-preview-content {
+        justify-content: space-between;
+        gap: 0;
+        margin: 32px 30px 0;
+        width: 267px;
+        height: 288px;
+    }
+
+    .illustration-img {
+        max-width: 100%;
+        display: block;
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .article-preview__title {
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+
+    .card-footer {
+        margin-bottom: 0;
+        position: relative;
+        z-index: 20;
+    }
+
+    .card--sharing {
+        position: absolute;
+        left: 0px;
+        bottom: 0;
+        z-index: 30;
+    }
+
+    .fa-share {
+        position: static;
+        z-index: 31;
+    }
+
+    .card__popup {
+        display: inline-flex;
+        padding: 10px 30px;
+        width: 327px;
+        height: 76px;
+        position: absolute;
+        left: -30px;
+        bottom: 0;
+        background-color: hsl(217, 19%, 35%);
+        border-radius: 0 0 10px 10px;
+        z-index: 10;
+    }
+}
