@@ -99,14 +99,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 32px;
+    /* width: 32px;
     height: 32px;
     border-radius: 50%;
     background-color: #ecf2f8;
-    background-color: hsl(203, 100%, 94%);
+    background-color: hsl(203, 100%, 94%); */
 }
-
-.card-footer .fa-share {
+.fa-share {
     display: inline-flex;
     color: #6e8098;
 }
@@ -190,11 +189,25 @@ body {
         left: 0px;
         bottom: 0;
         z-index: 30;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .fa-share {
-        position: static;
+        position: absolute;
+        right: -30px;
+        bottom: 10px;
         z-index: 31;
+        width: 32px;
+        height: 32px;
+        background-color: hsl(212, 23%, 69%);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        color: white;
     }
 
     .card__popup {
@@ -208,5 +221,9 @@ body {
         background-color: hsl(217, 19%, 35%);
         border-radius: 0 0 10px 10px;
         z-index: 10;
+    }
+
+    .fa-brands{
+        color: white;
     }
 }
